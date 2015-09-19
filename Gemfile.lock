@@ -128,6 +128,8 @@ GEM
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rails-controller-testing (0.0.3)
+      rails (>= 4.2)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -168,6 +170,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   rails!
+  rails-controller-testing
   sass-rails (~> 5.0)
   sprockets-rails!
   sqlite3
