@@ -36,6 +36,8 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.save
         Cart.destroy(session[:cart_id])
+        # TODO: Use OrderNotifierMailer instead of OrderNotifier
+        OrderNotifierMailer.received(@order).deliver
         session[:cart_id] = nil
         format.html { redirect_to store_url,
           notice: 'Thank you!.' }
